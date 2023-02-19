@@ -1,0 +1,140 @@
+:root{
+    --gold-primary: #b08d55;
+    --gold-light: #d5b06a;
+    --silver-primary: #aaa8a9;
+    --silver-light: #dcd7d3;
+    --light: #e9eaec;
+    --dark: #252523;
+    --red-primary: #780e18;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'labrada', sans-serif;
+    background-color: var(--silver-light);
+
+}
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+
+.navbar .navbar-logo{
+    display: inline-flex;
+    font-family: 'Labrada';
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color: var(--gold-primary);
+}
+
+
+.navbar .navbar-nav a {
+    color: var(--dark);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--silver-primary);
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.2rem solid var(--red-primary);
+    transform: scaleX(0);
+    transition: 0.3s linear ;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.6);
+}
+
+.navbar .navbar-extra a{
+    color: var(--dark);
+    margin: 0 0.5rem;
+}
+
+
+
+#hamburger-menu {
+    display: none;
+}
+/* navbar end */
+
+/* media queries */
+/* tablet */
+@media (max-width: 768px) {
+    html{
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--dark);
+        width: 20rem;
+        height: 100vh;
+        transition: 0.4s;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+    
+    .navbar .navbar-nav a{
+        color: var(--silver-light);
+        display: block;
+        font-size: 2rem;
+        margin: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2);
+    }
+}
+
+/* tablet end */
+
+/* mobile */
+@media (max-width: 450px) {
+    html{
+        font-size: 55%;
+
+    }
+}
+/* mobile end */
+/* media queries end */
