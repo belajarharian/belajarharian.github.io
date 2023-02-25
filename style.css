@@ -85,6 +85,36 @@ body{
 }
 /* navbar end */
 
+
+/* section */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(img/Asset\ 1.png);
+    background-size: 45%;
+    background-position: right 100px;
+    background-repeat: no-repeat;
+}
+
+.hero .content{
+    padding: 1.5rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 4em;
+    color: var(--light);
+    padding-bottom: 50px;
+    text-shadow: 4px 3px 5px #7A7A7A;
+}
+
+.hero .content h1 span{
+    color: var(--gold-light);
+    text-shadow: 4px 3px 5px #796d03;
+}
+/* section end */
+
 /* media queries */
 /* tablet */
 @media (max-width: 768px) {
